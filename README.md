@@ -8,21 +8,22 @@ se puede usar cualquier otro gestos de bases de datos.
 
 Para utilizar otro gestor de base datos simplemente modifique el archivo de configuracion app.config
 
-
-  <connectionStrings>
-    <add connectionString="Server=127.0.0.1;Port=5453;Database=AdventureWorks;Username=postgresql;Password=P@ssw0rds" name="postgreSQL" />
-  </connectionStrings>
-
-Por cada nuevo SGBD solo copie una nueva linea de conexion ejemplo:
+```
 <connectionStrings>
-    <add connectionString="Server=127.0.0.1;Port=5453;Database=AdventureWorks;Username=postgresql;Password=P@ssw0rds" name="postgreSQL" /> 
-    <add connectionString="Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;" name="servidor_SGBD" />
-  </connectionStrings>
-  
+  <add connectionString="Server=127.0.0.1;Port=5453;Database=AdventureWorks;Username=postgresql;Password=P@ssw0rds" name="postgreSQL" />
+</connectionStrings>
+```
+Por cada nuevo SGBD solo copie una nueva linea de conexion ejemplo:
+```
+<connectionStrings>
+  <add connectionString="Server=127.0.0.1;Port=5453;Database=AdventureWorks;Username=postgresql;Password=P@ssw0rds" name="postgreSQL" /> 
+  <add connectionString="Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;" name="servidor_SGBD" />
+</connectionStrings>
+```
   para invocación de las lineas de conexion se ejecuta lo siguiente:
   using System.Configuration;
 
-
+```
 namespace Cp_Configura
 {
     public class CnnHost
@@ -53,3 +54,4 @@ using (NpgsqlConnection cn = new NpgsqlConnection(CnnHost.CnnPgSQL()))
             {
               resto de la implementación
             }
+```
