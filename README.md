@@ -21,9 +21,8 @@ Por cada nuevo SGBD solo copie una nueva linea de conexion ejemplo:
 </connectionStrings>
 ```
   para invocación de las lineas de conexion se ejecuta lo siguiente:
-  using System.Configuration;
-
-```
+```  
+using System.Configuration;
 namespace Cp_Configura
 {
     public class CnnHost
